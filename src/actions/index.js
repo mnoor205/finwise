@@ -1,11 +1,14 @@
 "use server"
 
-export const onGetStockInfo = async () => {
-    const stocks = ["AAPL", "TSLA", "NVDA"];
-    let stockData = [];
+export const onGetStockInfo = async (stock) => {
+    // const stocks = ["AAPL", "TSLA", "NVDA"];
+    // let stockData = [];
 
-    for (const stock of stocks) {
-        const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stock}&apikey=VY1JPSH5MVLNAKGX`;
+    // for (const stock of stocks) {
+        
+    // }
+
+    const url = `https://api.polygon.io/v2/aggs/ticker/${stock}/range/1/day/2023-01-09/2023-01-09?apiKey=GBe7BRNJB17y4SQXPtYmRF0LHpyvOlwj`;
 
         try {
             const response = await fetch(url, {
@@ -21,12 +24,11 @@ export const onGetStockInfo = async () => {
             }
 
             const data = await response.json();
-            stockData.push(data);  
+            return data
         } catch (error) {
             console.error('Error:', error);
         }
-    }
 
-    console.log(stockData);  
-    return stockData;  
+    // console.log(stockData);  
+    // return stockData;  
 }

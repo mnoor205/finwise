@@ -1,9 +1,12 @@
-"use client";
-
 import Sidebar from "@/components/sidebar"; // Import Sidebar component
 import Card from "@/components/Card"; // Import Card component
+import { onGetStockInfo } from "@/actions";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+
+  const data = await onGetStockInfo("TSLA")
+  console.log(data)
+
   // Card data for the dashboard
   const infoCards = [
     {

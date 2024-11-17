@@ -2,6 +2,7 @@
 
 "use client"; // Ensure this is a Client Component
 
+import { onGetStockInfo } from "@/actions";
 import Sidebar from "@/components/sidebar";
 import React, { useState, useRef } from "react";
 import { GrAddCircle } from "react-icons/gr"; // Importing an upload icon from react-icons
