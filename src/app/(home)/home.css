@@ -1,0 +1,188 @@
+/* General styles for the homepage */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f3f4f6; /* Light background for better contrast */
+    color: #333; /* Neutral text color */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background: url("/background.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative; /* For overlay effect */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Subtle dark overlay for text clarity */
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    z-index: 2;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    z-index: 2;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #0070f3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05); /* Slight scale-up effect */
+}
+
+/* Features Section */
+.features {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.features ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+    text-align: left;
+}
+
+.features li {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding-left: 30px;
+    position: relative;
+}
+
+.features li::before {
+    content: "✔";
+    color: #0070f3;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+/* How It Works Section */
+.how-it-works {
+    background-color: #f9fafb;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.how-it-works ol {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.how-it-works ol li {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 15px 0;
+    padding-left: 30px;
+    position: relative;
+}
+
+.how-it-works ol li::before {
+    content: "✔";
+    color: #0070f3;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-10%);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonials blockquote {
+    text-align: center;
+    margin: 20px 0;
+    font-style: italic;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #0070f3;
+}
