@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+/* Page Container */
+.container {
+    max-width: 800px;
+    margin: 50px auto; /* Center with spacing at the top */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2.5rem;
+    color: #005bb5; /* Matches a professional blue color */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form items */
+}
+
+/* Checkbox List */
+form div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 600px;
+    background: #f9fafc; /* Light background for checkbox items */
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+form div:hover {
+    transform: scale(1.02); /* Slight hover effect for interactivity */
+}
+
+form div label {
+    font-size: 1.2rem;
+    color: #333; /* Darker text for readability */
+    margin-left: 10px;
+    flex: 1; /* Ensure label takes up remaining space */
+}
+
+label input[type="checkbox"] {
+    margin-right: 10px; /* Adds space between the checkbox and the text */
+}
+
+/* Input Field for Other */
+input[type="text"] {
+    padding: 12px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 10px;
+    background: #f9fafc;
+    color: #333; /* Dark text inside input fields */
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #005bb5; /* Brand color for focus */
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 91, 181, 0.3); /* Slight glow effect */
+}
+
+/* Submit Button */
+button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #005bb5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #003f7f;
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+button:active {
+    transform: scale(0.98); /* Pressed effect */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    input[type="text"] {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
