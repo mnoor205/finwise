@@ -63,4 +63,35 @@
     color: #555;
     text-align: center;
   }
-  
+  /* Stock Card Styles */
+.stock-card {
+  background-color: white; /* White background for the card */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Space inside the card */
+  margin-top: 20px; /* Space above the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 400px; /* Restrict maximum width */
+}
+
+/* Title Style for Stock Ticker */
+.stock-card h3 {
+  font-size: 1.8rem; /* Large font size for the title */
+  color: #0070f3; /* Primary blue color for the ticker */
+  margin-bottom: 10px; /* Space below the title */
+}
+
+/* List Styling for Stock Details */
+.stock-card ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+.stock-card ul li {
+  font-size: 1.2rem; /* Font size for the list items */
+  margin: 5px 0; /* Space between list items */
+}
+
+.stock-card ul li strong {
+  color: #333; /* Darker text for labels */
+}
