@@ -1,0 +1,28 @@
+/* Card Styles */
+.card {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Inner padding */
+    margin: 10px; /* Outer margin */
+    max-width: 300px; /* Limit card width */
+    text-align: center; /* Center-align content */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    color: #005bb5; /* Highlighted title color */
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
