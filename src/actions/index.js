@@ -1,5 +1,7 @@
 "use server"
 
+import { redirect } from 'next/navigation'
+
 export const onGetStockInfo = async (stock) => {
     // const stocks = ["AAPL", "TSLA", "NVDA"];
     // let stockData = [];
@@ -32,3 +34,15 @@ export const onGetStockInfo = async (stock) => {
     // console.log(stockData);  
     // return stockData;  
 }
+
+
+export async function refreshHistory(path) {
+    redirect(path)
+  }
+  
+  export async function getMissingKeys() {
+    const keysRequired = ['GROQ_API_KEY']
+    return keysRequired
+      .map(key => (process.env[key] ? '' : key))
+      .filter(key => key !== '')
+  }

@@ -2,10 +2,15 @@
 
 import { useState } from "react";
 import "./stock.css";
+import { useRouter } from 'next/navigation'
+
 
 export default function StocksPage() {
   const [selectedStocks, setSelectedStocks] = useState([]);
   const [otherStock, setOtherStock] = useState(""); 
+
+  const router  = useRouter()
+
 
   // Expanded stock options
   const stockOptions = [
@@ -38,8 +43,8 @@ export default function StocksPage() {
       allSelectedStocks.push(`Custom: ${otherStock.trim()}`);
     }
 
-    console.log("Selected Stocks:", allSelectedStocks);
-    
+    router.push('/dashboard')
+  
   };
 
   return (

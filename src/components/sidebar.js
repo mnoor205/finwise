@@ -11,13 +11,17 @@ export default function Sidebar() {
     router.push(path); // Redirects to the given path
   };
 
+  const handleRedirect = () => {
+    window.location.href = "http://localhost:3001/";
+  };
+
   return (
     <div className="dashboard-container">
       {/* Sidebar */}
       <div className="sidebar">
         <h3>Menu</h3>
         <button onClick={() => handleNavigation("/dashboard")}>Home</button>
-        <button onClick={() => handleNavigation("/assistant")}>Assistant</button>
+        <button onClick={handleRedirect}>Assistant</button>
       </div>
     </div>
   );
