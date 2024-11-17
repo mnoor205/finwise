@@ -2,6 +2,7 @@
 
 "use client"; // Ensure this is a Client Component
 
+import Sidebar from "@/components/sidebar";
 import React, { useState, useRef } from "react";
 import { GrAddCircle } from "react-icons/gr"; // Importing an upload icon from react-icons
 
@@ -153,6 +154,7 @@ export default function Home() {
 
   return (
     <main className="bg-dark text-white h-screen p-8 flex flex-col justify-center items-center">
+      
       <div className="space-y-11 relative h-full w-full">
         {/* Conditionally render the headers only if no inquiry has been made */}
         {!hasInquired && (

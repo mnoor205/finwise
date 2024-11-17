@@ -19,12 +19,6 @@ export default function Sidebar() {
         <button onClick={() => handleNavigation("/dashboard")}>Home</button>
         <button onClick={() => handleNavigation("/assistant")}>Assistant</button>
       </div>
-
-      {/* Main Content */}
-      <div className="main-content">
-        <h2>Welcome to Your Dashboard!</h2>
-        <p>Select an option from the sidebar.</p>
-      </div>
     </div>
   );
 }
