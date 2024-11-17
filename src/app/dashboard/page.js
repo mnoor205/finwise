@@ -1,12 +1,9 @@
 import Sidebar from "@/components/sidebar"; // Import Sidebar component
-import Card from "@/components/Card"; // Import Card component
-import { onGetStockInfo } from "@/actions";
 
 export default async function DashboardPage() {
 
   const data = await onGetStockInfo("TSLA")
   console.log(data)
-
   // Card data for the dashboard
   const infoCards = [
     {
@@ -27,20 +24,26 @@ export default async function DashboardPage() {
   ];
 
   return (
-    <div style={{ display: "flex", minHeight: "100vh" }}>
+    <div className="dashboard-container">
       {/* Sidebar */}
       <Sidebar />
 
       {/* Main Content */}
-      <div style={{ flex: 1, padding: "20px" }}>
+      <div className="main-content">
         <h1>Welcome to Your Dashboard!</h1>
         <p>Your central hub for managing insights and queries.</p>
 
-        {/* Card Container */}
-        <div style={{ display: "flex", gap: "20px", flexWrap: "wrap", marginTop: "20px" }}>
-          {infoCards.map((card, index) => (
-            <Card key={index} title={card.title} description={card.description} />
-          ))}
+        {/* Stock Information Section */}
+        <div className="stock-card">
+          <h3>{ticker}</h3>
+          <ul>
+            <li><strong>Open Price:</strong> ${results[0].o}</li>
+            <li><strong>Close Price:</strong> ${results[0].c}</li>
+            <li><strong>High:</strong> ${results[0].h}</li>
+            <li><strong>Low:</strong> ${results[0].l}</li>
+            <li><strong>Volume:</strong> {results[0].v.toLocaleString()}</li>
+            <li><strong>Weighted Avg Price:</strong> ${results[0].vw}</li>
+          </ul>
         </div>
       </div>
     </div>
